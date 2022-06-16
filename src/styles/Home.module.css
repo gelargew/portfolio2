@@ -1,0 +1,13 @@
+
+
+
+.nav li {
+  list-style: none;
+}
+
+.biograph {
+  width: 140px;
+  position: absolute;
+  right: 4rem;
+  bottom: 4rem;
+}
