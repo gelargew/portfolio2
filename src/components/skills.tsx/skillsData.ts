@@ -87,12 +87,6 @@ export const SKILLS_DATA = {
         imgURL: '/blender',
         exp: '3 month',
         active: true
-      },
-      {
-        title: 'Premier Pro',
-        imgURL: '/premier',
-        exp: '6 month',
-        active: true
       }
     ],
     cloud: [

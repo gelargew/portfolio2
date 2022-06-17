@@ -56,7 +56,7 @@ const Instances = ({ material}: { material: THREE.Material }) => {
       useFrame(() => {
         sphereRefs.forEach((el) => {
             el.position.y += 0.02
-            if (el.position.y > 19) el.position.y = -18
+            if (el.position.y > 20) el.position.y = -19
             el.rotation.x += 0.03
             el.rotation.y += 0.03
             el.rotation.z += 0.02
@@ -104,8 +104,8 @@ export default function TheSphere() {
                 ref={set}
                 envMap={envMap}
                 bumpMap={bumpMap}
-                color='#010101'
-                roughness={0.2}
+                color='#000'
+                roughness={0.4}
                 metalness={1}
                 bumpScale={0.05}
                 clearcoat={1}

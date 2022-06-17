@@ -1,8 +1,12 @@
 
-
+.nav {
+  margin-top: 5rem;
+  width: min-content
+}
 
 .nav li {
   list-style: none;
+  margin: 1rem 0;
 }
 
 .biograph {

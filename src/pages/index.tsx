@@ -2,15 +2,15 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import Menu from '../components/home/Menu'
+import MainLayout from '../components/MainLayout'
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
   return (
-    <main>
-      <h1>Gelar Rustiawan</h1>
+    <MainLayout>
       <Menu />
       <Biograph />
-    </main>
+    </MainLayout>
   )
 }
 
