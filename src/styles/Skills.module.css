@@ -1,0 +1,48 @@
+.skills {
+    position: absolute;
+    right: 4rem;
+    top: 7rem;
+    width: fit-content;
+    max-width: calc(100vw - 40vw);
+}
+
+.skills h4 {
+    font-size: large;
+    text-align: end;
+    margin-bottom: 0;
+}
+
+.skills>section>ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+    transition: 1s;
+    margin-bottom: 2rem;
+    justify-content: flex-end;
+}
+
+.skills li {
+    width: 80px;
+    text-align: center;
+    overflow: visible;
+}
+
+.skills img {
+    transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.skills img:hover {
+    transform: rotate(10deg) scale(1.1);
+}
+
+.SkillsFilter {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+}
+
+.SkillsFilter button {
+    font-size: larger;
+}

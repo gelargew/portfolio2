@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
-import Skills from '../components/skills.tsx/Skills'
+import MainLayout from '../components/MainLayout'
+import Skills from '../components/skills/Skills'
 
 
 
@@ -7,10 +8,9 @@ import Skills from '../components/skills.tsx/Skills'
 
 const Home: NextPage = () => {
   return (
-    <main>
-      <h1>SKILLS</h1>
+    <MainLayout>
       <Skills />
-    </main>
+    </MainLayout>
   )
 }
 

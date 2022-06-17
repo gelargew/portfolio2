@@ -103,7 +103,7 @@ export const SKILLS_DATA = {
         active: false
       },
       {
-        title: 'Google Cloud Platform',
+        title: 'GCP',
         imgURL: '/gcp',
         exp: '2 year',
         active: false
