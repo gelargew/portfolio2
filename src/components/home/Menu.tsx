@@ -36,7 +36,7 @@ export default function Menu() {
                     onPointerEnter={hoverLink}
                     onPointerLeave={unHoverLink}
                 >
-                    <Link href={'/works'}>Projects</Link>
+                    <Link href={'/projects'}>Projects</Link>
                 </li>
                 <li
                     onPointerEnter={hoverLink}

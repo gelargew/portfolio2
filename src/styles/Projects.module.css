@@ -1,0 +1,7 @@
+section.projects {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    justify-content: center;
+    gap: 4rem;
+}
