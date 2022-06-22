@@ -21,7 +21,7 @@ export default function Menu() {
 
     useEffect(() => {
         return () => {unHoverLink()}
-    }, [])
+    }, [unHoverLink])
 
     return (
         <nav className={styles.nav}>
@@ -47,7 +47,7 @@ export default function Menu() {
                     onPointerEnter={hoverLink}
                     onPointerLeave={unHoverLink}
                 >
-                    <a target={'_blank'} href={'https://github.com/gelargew'}>GitHub</a>
+                    <a target={'_blank'} rel={'noreferrer'} href={'https://github.com/gelargew'}>GitHub</a>
                 </li>
             </ul>
         </nav>

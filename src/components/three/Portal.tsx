@@ -38,6 +38,7 @@ export default function Portal() {
         <group ref={ref}>
             {torusData.map(data => (
                 <Torus 
+                    key={data.positionZ}
                     position={[0, 0, data.positionZ]} 
                     args={data.args} 
                     onClick={() => console.log(ref.current.children)}
