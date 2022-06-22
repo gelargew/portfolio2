@@ -47,7 +47,7 @@ export default function Menu() {
                     onPointerEnter={hoverLink}
                     onPointerLeave={unHoverLink}
                 >
-                    <Link href={'/GitHub'}>GitHub</Link>
+                    <a target={'_blank'} href={'https://github.com/gelargew'}>GitHub</a>
                 </li>
             </ul>
         </nav>

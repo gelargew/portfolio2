@@ -25,5 +25,20 @@ export const lerpDistortValue = atom(
             )
         )
     }
-
+)
+export const cameraTarget = atom(new THREE.Vector3(0, 0, 0))
+export const cameraPosition = atom(new THREE.Vector3(0, 0, 208))
+export const setCameraProps = atom(
+    (get) => ({
+        target: get(cameraTarget),
+        position: get(cameraPosition)
+    }),
+    (get, set, { position={x:0, y:0, z:5}, target={x:0, y:0, z:0} }) => {
+        const cp = get(cameraPosition)
+        cp.set(position.x, position.y, position.z)
+        set(cameraPosition, cp)
+        const ct = get(cameraTarget)
+        ct.set(target.x, target.y, target.z)
+        set(cameraTarget, ct)
+    }
 )

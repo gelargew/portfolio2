@@ -19,10 +19,18 @@ export const PROJECT_DATA = {
             projectURL: 'https://stoneark.vercel.app/'
         },
         {
+            title: 'covid 3d chart',
+            description: 'static web page that automatically being updated daily using github workflow and vercel',
+            tech: ['github workflow', 'threejs', 'react', 'vercel'],
+            date: 2022,
+            roles: ['developer'],
+            projectURL: 'https://covid.gelar.dev/'
+        },
+        {
             title: 'kanban board',
             description: 'Interactive kanban board prototype with drag and drop function.',
             tech: ['vite', 'react', 'typescript'],
-            date: 2022,
+            date: 2021,
             imgURL: 'kanban_board.webp',
             roles: ['developer'],
             projectURL: 'https://kanban-board-gelar.vercel.app/'

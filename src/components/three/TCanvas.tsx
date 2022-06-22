@@ -5,13 +5,18 @@ import TheSphere from "./TheSphere/TheSphere";
 import { Bloom, DepthOfField, EffectComposer, Glitch, Noise, Vignette } from '@react-three/postprocessing'
 import styles from '../../styles/Canvas.module.css'
 import { useRouter } from "next/router";
+import ProjectGallery from "./ProjectGallery";
+import { TCamera } from "./TCamera";
+import ProjectImage from "./ProjectImage/ProjectImage";
+import ProjectImage2 from "./ProjectImage/ProjectImage2";
+import Portal from "./Portal";
 
 export default function TCanvas() {
 
     return (
         <div className={styles.container}>
             <Canvas
-                camera={{ position: [0, 0, 4], near: 0.01 }}
+                camera={{ position: [0, 0, 4], near: 0.01, far: 1000 }}
                 gl={{
                     powerPreference: 'high-performance',
                     alpha: false,
@@ -22,10 +27,13 @@ export default function TCanvas() {
             >
                 <color attach='background' args={['#050505']} />
                 <fog color='#161616' attach='fog' near={8} far={30} />
-                <pointLight position={[4, 5, 0]} intensity={0} />
+                
                 <OrbitControls />
+                <TCamera />
                 <Suspense fallback={<Html center>Loading.</Html>}>
                     <TheSphere />
+                    <ProjectImage2 />
+                    <Portal />
                 </Suspense>
                 <EffectComposer multisampling={0} disableNormalPass>
                     <DepthOfField
@@ -34,13 +42,7 @@ export default function TCanvas() {
                         bokehScale={2}
                         height={480}
                     />
-                    <Bloom
-                        luminanceThreshold={0}
-                        luminanceSmoothing={0.9}
-                        height={300}
-                        opacity={3}
-                    />
-                    <Noise opacity={0.025} />
+
                     <Vignette eskil={false} offset={0.1} darkness={1.1} />
                     <Glitch
                         active={false} // turn on/off the effect (switches between "mode" prop and GlitchMode.DISABLED)

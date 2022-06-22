@@ -24,13 +24,26 @@ export default function Projects() {
                 <button>fullstack</button>
             </nav>
             <section>
-                {data.map(d => <p>{d.title}</p>)}            
+                {data.map(d => <ProjectList data={d} key={d.title} ></ProjectList>)}            
             </section>
         </section>
     )
 }
 
 
-const ProjectList = () => {
+const ProjectList = ({data}: {data: typeof PROJECT_DATA.frontend[0]}) => {
+    
+    return (
+        <div>
+            <h4>{data.title}</h4>
+{/*             <p>{data.description}</p>
+            <ul>
+                {data.tech.map((tech, i) => <li key={i}>{tech}</li>)}
+            </ul>
+            <ul>
+                {data.roles.map((role, i) => <li key={i} >{role}</li>)}
+            </ul> */}
+        </div>
+    )
 
 }

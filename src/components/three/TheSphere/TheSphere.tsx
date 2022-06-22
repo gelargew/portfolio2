@@ -99,7 +99,6 @@ export default function TheSphere() {
 
     return (
         <>
-            <TCamera />
             <MeshDistortMaterial
                 ref={set}
                 envMap={envMap}
@@ -120,23 +119,3 @@ export default function TheSphere() {
     )
 }
 
-
-const TCamera = () => {
-    const {camera} = useThree()
-    useFrame(({mouse}) => {
-        camera.position.x = THREE.MathUtils.lerp(
-            camera.position.x,
-            -mouse.x,
-            0.02
-        )
-        camera.position.y = THREE.MathUtils.lerp(
-            camera.position.y,
-            mouse.y,
-            0.02
-        )
-        camera.lookAt(0, 0, 0)
-    })
-
-
-    return null
-}
