@@ -24,6 +24,7 @@ export const PROJECT_DATA = {
             tech: ['github workflow', 'threejs', 'react', 'vercel'],
             date: 2022,
             roles: ['developer'],
+            imgURL: 'covid3d.webp',
             projectURL: 'https://covid.gelar.dev/'
         },
         {
@@ -60,7 +61,7 @@ export const PROJECT_DATA = {
             description: 'interactive and customizable live image distortion effect using shaders.',
             tech: ['glsl', 'threejs', 'r3f', 'vite'],
             date: 2022,
-            imgURL: 'pixtort',
+            imgURL: 'pixtort.webp',
             roles: ['developer'],
             projectURL: 'https://distorted-pixel.vercel.app/'
         },

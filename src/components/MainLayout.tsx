@@ -1,4 +1,7 @@
-import { useRef } from "react"
+import { useAtom } from "jotai"
+import { useRouter } from "next/router"
+import { useEffect, useRef } from "react"
+import { setCameraProps } from "../store/ThreeState"
 import Menu from "./home/Menu"
 
 export default function MainLayout(props: JSX.IntrinsicElements['main']) {
@@ -15,6 +18,5 @@ export default function MainLayout(props: JSX.IntrinsicElements['main']) {
             </header>
             {props.children}
         </main>
-
     )
 }

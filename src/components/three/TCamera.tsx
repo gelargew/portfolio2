@@ -6,8 +6,6 @@ import { cameraPosition, cameraTarget } from "../../store/ThreeState"
 export const TCamera = () => {
     const {camera} = useThree()
     const [CameraPos] = useAtom(cameraPosition)
-    const [CameraTarget] = useAtom(cameraTarget)
-    const cameraDirection = new THREE.Vector3(0, 0, 0)
     useFrame(({mouse, clock}, delta) => {
         camera.position.x = THREE.MathUtils.lerp(
             camera.position.x,

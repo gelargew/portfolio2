@@ -8,7 +8,6 @@ import { lerpDistortValue, sphereDistortFast, SphereRotationSpeed } from "../../
 
 const MainSphere = ({ material }: { material: THREE.Material}) => {
     const main  = useRef<THREE.Object3D>(null!)
-    const [rotationSpeed] = useAtom(SphereRotationSpeed)
 
     useFrame(({ clock, mouse}) => {
         main.current.rotation.z = THREE.MathUtils.damp(

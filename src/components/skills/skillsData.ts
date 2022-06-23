@@ -51,6 +51,12 @@ export const SKILLS_DATA = {
         active: true
       },
       {
+        title: 'pmndrs',
+        imgURL: '/pmndrs',
+        exp: '6 month',
+        active: true
+      },
+      {
         title: 'NextJS',
         imgURL: '/nextjs',
         exp: '1 year',

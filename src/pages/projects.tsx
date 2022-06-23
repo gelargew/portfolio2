@@ -15,8 +15,6 @@ const Home: NextPage = () => {
   return (
     <MainLayout>
       <Projects />
-      <button onClick={() => setCamPos({position:{x:0, y:0, z:200}, target: {x:0, y:0, z: -200}})} > HELLO</button>
-      <button onClick={() => setCamPos({position: {x:0, y:0, z:5}})} > HELLO1</button>
     </MainLayout>
   )
 }

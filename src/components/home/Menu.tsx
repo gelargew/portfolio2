@@ -1,12 +1,15 @@
 import { useAtom } from "jotai"
 import Link from "next/link"
+import { useRouter } from "next/router"
 import { useEffect } from "react"
-import { sphereDistortFast } from "../../store/ThreeState"
+import { setCameraProps, sphereDistortFast } from "../../store/ThreeState"
 import styles from '../../styles/Home.module.css'
 
 
 export default function Menu() {
     const [,distortIsFast] = useAtom(sphereDistortFast)
+    const router = useRouter()
+    const [a, setCamProps] = useAtom(setCameraProps)
 
     const hoverLink = () => {
         distortIsFast(true)
@@ -16,7 +19,18 @@ export default function Menu() {
     }
 
     const changeRoute = (route: string) => {
-
+        switch(route) {
+            case '/projects':
+                setCamProps({position: {x: 0, y: 0, z: 5}})
+                break
+            case '/skills':
+                setCamProps({position: {x: 0, y: 0, z: 150}})
+                break
+            default:
+                setCamProps({position: {x: 0, y: 0, z: 208}})
+        }
+        router.push(route)
+        
     }
 
     useEffect(() => {
@@ -29,21 +43,25 @@ export default function Menu() {
                 <li
                     onPointerEnter={hoverLink}
                     onPointerLeave={unHoverLink}
+                    onClick={() => changeRoute('/')}
                 >
-                    <Link href={'/'}>Home</Link>
+                    Home
                 </li>
                 <li
                     onPointerEnter={hoverLink}
                     onPointerLeave={unHoverLink}
+                    onClick={() => changeRoute('/projects')}
                 >
-                    <Link href={'/projects'}>Projects</Link>
+                    Projects
                 </li>
                 <li
                     onPointerEnter={hoverLink}
                     onPointerLeave={unHoverLink}
+                    onClick={() => changeRoute('/skills')}
                 >
-                    <Link href={'/skills'}>Skills</Link>
-                </li>                <li
+                    Skills
+                </li>                
+                <li
                     onPointerEnter={hoverLink}
                     onPointerLeave={unHoverLink}
                 >
@@ -53,7 +71,6 @@ export default function Menu() {
         </nav>
     )
 }
-
 
 
 
