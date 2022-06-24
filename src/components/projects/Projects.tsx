@@ -45,7 +45,7 @@ interface ProjectListProps {
 const ProjectList = ({data}: ProjectListProps) => {
     
     return (
-        <a href={data.projectURL} target='_blank' className={styles.project}>
+        <a href={data.projectURL} target='_blank' rel='noreferrer' className={styles.project}>
             {data.imgURL 
             ? 
             <img src={'/projects/'+data.imgURL} />

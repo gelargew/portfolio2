@@ -5,7 +5,6 @@ import TheSphere from "./TheSphere/TheSphere";
 import { Bloom, DepthOfField, EffectComposer, Glitch, Noise, Vignette } from '@react-three/postprocessing'
 import styles from '../../styles/Canvas.module.css'
 import { TCamera } from "./TCamera";
-import ProjectImage2 from "./ProjectImage/ProjectImage2";
 import Portal from "./Portal";
 
 export default function TCanvas() {
