@@ -38,7 +38,7 @@ export default function Menu() {
 
     useEffect(() => {
         return () => {unHoverLink()}
-    }, [unHoverLink])
+    }, [])
 
     return (
         <nav className={styles.nav}>
