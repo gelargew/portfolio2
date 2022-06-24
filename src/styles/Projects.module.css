@@ -68,3 +68,9 @@ section.projects nav {
     cursor: pointer;
 }
 
+
+@media screen and (max-width: 900px) {
+    .imageFallback h4 {
+        font-size: medium;
+    }
+}

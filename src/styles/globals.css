@@ -79,3 +79,18 @@ header {
   background: #222;
   width: 3px;
 }
+
+
+@media (max-width: 900px) {
+
+  main {
+    padding: 2rem;
+    pointer-events: auto;
+  }
+  header h1 {
+    font-size: large;
+  }
+  header small {
+    font-size: 10px;
+  }
+}

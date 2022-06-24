@@ -15,3 +15,23 @@
   right: 4rem;
   bottom: 4rem;
 }
+
+
+@media (max-width: 900px) {
+  .nav {
+    margin-top: 2rem;
+    
+  }
+
+  .nav li {
+    margin: 0.5rem 0;
+  }
+
+  .biograph {
+    font-style: italic;
+    right: 1rem;
+    bottom: 2rem;
+  }
+
+  
+}

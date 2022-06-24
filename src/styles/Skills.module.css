@@ -51,3 +51,13 @@
 .SkillsFilter button {
     font-size: larger;
 }
+
+
+@media (max-width: 900px) {
+    .skills li {
+        width: 40px;
+    }
+    .skills p {
+        display: none;
+    }
+}
