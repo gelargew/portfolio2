@@ -19,10 +19,7 @@ export default function Projects() {
     return (
         <section className={styles.projects}>
             <nav>
-                <button>all</button>
-                <button>web frontend</button>
-                <button>3d & webgl</button>
-                <button>fullstack</button>
+            프로젝트
             </nav>
             <section className={styles.projectList} >
                 {data.map(d => <ProjectList data={d} key={d.title} ></ProjectList>)}            
@@ -48,32 +45,20 @@ interface ProjectListProps {
 const ProjectList = ({data}: ProjectListProps) => {
     
     return (
-        <>
+        <a href={data.projectURL} target='_blank' className={styles.project}>
             {data.imgURL 
-
             ? 
-
-            <div className={styles.project}>
-                <div className={styles.projectDetail}>
-                    <h4>{data.title}</h4>
-                    <small>{data.date}</small>
-                    <p>{data.description}</p>
-                    <ul>
-                        {data.tech.map((tech, i) => <li key={i}>{tech}</li>)}
-                    </ul>
-                    <a href={data.projectURL} target='_blank'>visit</a>
-                </div>
-                <Image width={512} height={500} src={'/projects/'+data.imgURL} />
-            </div> 
-
+            <img src={'/projects/'+data.imgURL} />
             :
-
-            <div>
+            <div className={styles.imageFallback}>
                 <h4>{data.title}</h4>
             </div>   
-
-            }    
-        </>
+            }
+            <div className={styles.projectDetail}>
+                <h4>{data.title}</h4>
+                <p>{data.date}</p>
+            </div>
+        </a> 
     )
 
 }

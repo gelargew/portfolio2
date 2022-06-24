@@ -2,37 +2,37 @@ export const SKILLS_DATA = {
     language: [
       {
         title: 'TypeScript',
-        imgURL: '/typescript',
+        imgURL: '/typescript.webp',
         exp: '1 year',
         active: true
       },
       {
-        title: 'JavaScript',
-        imgURL: '/javascript',
-        exp: '3 years',
-        active: false
-      },
-      {
         title: 'WebGL',
-        imgURL: '/webgl',
+        imgURL: '/webgl.webp',
         exp: '6 month',
         active: true
       },
       {
-        title: 'SQL',
-        imgURL: '/sql',
-        exp: '2 year',
-        active: false
-      },
-      {
         title: 'Python',
-        imgURL: '/python',
+        imgURL: '/python.webp',
         exp: '2 year',
         active: true
       },
       {
+        title: 'JavaScript',
+        imgURL: '/javascript.webp',
+        exp: '3 years',
+        active: false
+      },
+      {
+        title: 'SQL',
+        imgURL: '/sql.webp',
+        exp: '2 year',
+        active: false
+      },
+      {
         title: 'c++',
-        imgURL: '/cplus',
+        imgURL: '/cplus.webp',
         exp: '2 year',
         active: false
       }
@@ -40,37 +40,43 @@ export const SKILLS_DATA = {
     framework: [
       {
         title: 'React',
-        imgURL: '/react',
+        imgURL: '/react.webp',
         exp: '1 year',
         active: true
       },
       {
         title: 'ThreeJS',
-        imgURL: '/threejs',
+        imgURL: '/threejs.svg',
         exp: '6 month',
         active: true
       },
       {
+        title: 'NodeJS',
+        imgURL: '/nodejs.svg',
+        exp: '1 year',
+        active: true
+      },
+      {
         title: 'pmndrs',
-        imgURL: '/pmndrs',
+        imgURL: '/pmndrs.png',
         exp: '6 month',
         active: true
       },
       {
         title: 'NextJS',
-        imgURL: '/nextjs',
+        imgURL: '/nextjs.png',
         exp: '1 year',
         active: true
       },
       {
         title: 'Django',
-        imgURL: '/django',
+        imgURL: '/django.webp',
         exp: '1 year',
         active: false
       },
       {
         title: 'TensorFlow',
-        imgURL: '/tensorflow',
+        imgURL: '/tensorflow.webp',
         exp: '2 year',
         active: false
       }
@@ -78,19 +84,19 @@ export const SKILLS_DATA = {
     tools: [
       {
         title: 'VSCode',
-        imgURL: '/vscode',
+        imgURL: '/vscode.webp',
         exp: '2 year',
         active: true
       },
       {
         title: 'GitHub',
-        imgURL: '/github',
+        imgURL: '/github.svg',
         exp: '2 month',
         active: true
       },
       {
         title: 'Blender',
-        imgURL: '/blender',
+        imgURL: '/blender.webp',
         exp: '3 month',
         active: true
       }
@@ -98,25 +104,25 @@ export const SKILLS_DATA = {
     cloud: [
       {
         title: 'Vercel',
-        imgURL: '/vercel',
+        imgURL: '/vercel.svg',
         exp: '1 year',
         active: true
       },
       {
         title: 'Firebase',
-        imgURL: '/firebase',
+        imgURL: '/firebase.webp',
         exp: '6 month',
         active: false
       },
       {
         title: 'GCP',
-        imgURL: '/gcp',
+        imgURL: '/gcp.webp',
         exp: '2 year',
         active: false
       },
       {
         title: 'Heroku',
-        imgURL: '/heroku',
+        imgURL: '/heroku.webp',
         exp: '2 year',
         active: false
       }

@@ -21,10 +21,13 @@ export default function Menu() {
     const changeRoute = (route: string) => {
         switch(route) {
             case '/projects':
-                setCamProps({position: {x: 0, y: 0, z: 5}})
+                setCamProps({position: {x: 0, y: 0, z: 100}})
                 break
             case '/skills':
                 setCamProps({position: {x: 0, y: 0, z: 150}})
+                break
+            case '/profile':
+                setCamProps({position: {x: 0, y: 0, z: 5}})
                 break
             default:
                 setCamProps({position: {x: 0, y: 0, z: 208}})
@@ -64,9 +67,10 @@ export default function Menu() {
                 <li
                     onPointerEnter={hoverLink}
                     onPointerLeave={unHoverLink}
+                    onClick={() => changeRoute('/profile')}
                 >
-                    <a target={'_blank'} rel={'noreferrer'} href={'https://github.com/gelargew'}>GitHub</a>
-                </li>
+                    Profile
+                </li> 
             </ul>
         </nav>
     )

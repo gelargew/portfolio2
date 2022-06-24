@@ -19,7 +19,7 @@ export const TCamera = () => {
         )
         camera.position.z = THREE.MathUtils.damp(camera.position.z, CameraPos.z, 2, delta)
         
-        camera.lookAt(0, 0, -200)
+        camera.lookAt(0, 0, 0)
     })
 
 

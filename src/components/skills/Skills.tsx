@@ -7,13 +7,23 @@ import { SkillsFilter } from "../../store/Store";
 
 
 export default function Skills() {
-    const [, setSkillsFilter] = useAtom(SkillsFilter)
+    const [skillsFilter, setSkillsFilter] = useAtom(SkillsFilter)
 
     return (
         <section className={styles.skills} >
             <section className={styles.SkillsFilter}>
-                <button onClick={() => setSkillsFilter('all')}>All</button>
-                <button onClick={() => setSkillsFilter('active')}>Active</button>
+                <button 
+                    onClick={() => setSkillsFilter('all')}
+                    style={{
+                        opacity: skillsFilter === 'all' ? 1 : 0.5
+                    }}
+                >All</button>
+                <button 
+                    onClick={() => setSkillsFilter('active')}
+                    style={{
+                        opacity: skillsFilter === 'active' ? 1 : 0.5
+                    }}
+                    >Active</button>
             </section>
             <SkillSection title='Programming language' data={SKILLS_DATA.language} />
             <SkillSection title='Framework' data={SKILLS_DATA.framework} />
@@ -38,7 +48,7 @@ const SkillSection = ({data, title }: { data: typeof SKILLS_DATA.language, title
 
 
 const Card = ({data} : {data: typeof SKILLS_DATA.language[0]}) => {
-    const imgURL = '/icons' + data.imgURL + '.webp'
+    const imgURL = '/icons' + data.imgURL
     const [isHovered, setIsHovered] = useState(false)
     const [skillFilter] = useAtom(SkillsFilter)
     const displayStyle = useMemo(() => {

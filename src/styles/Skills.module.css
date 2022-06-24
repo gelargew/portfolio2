@@ -6,6 +6,10 @@
     max-width: calc(100vw - 40vw);
 }
 
+.skills button {
+    transition: opacity 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
 .skills h4 {
     font-size: large;
     text-align: end;
@@ -31,6 +35,7 @@
 
 .skills img {
     transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    filter: invert(0);
 }
 
 .skills img:hover {

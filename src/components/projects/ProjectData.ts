@@ -1,6 +1,15 @@
 export const PROJECT_DATA = {
     frontend: [
         {
+            title: 'pixtort',
+            description: 'interactive and customizable live image distortion effect using shaders.',
+            tech: ['glsl', 'threejs', 'r3f', 'vite'],
+            date: 2022,
+            imgURL: 'pixtort.webp',
+            roles: ['developer'],
+            projectURL: 'https://distorted-pixel.vercel.app/'
+        },
+        {
             title: 'yona yona weekenders',
             description: 'an unofficial web page for japanese band yona yona weekenders.',
             tech: ['sukuroru', 'gatsby', 'react', 'typescript'],
@@ -57,20 +66,10 @@ export const PROJECT_DATA = {
             projectURL: 'https://art.gelar.dev/'
         },
         {
-            title: 'pixtort',
-            description: 'interactive and customizable live image distortion effect using shaders.',
-            tech: ['glsl', 'threejs', 'r3f', 'vite'],
-            date: 2022,
-            imgURL: 'pixtort.webp',
-            roles: ['developer'],
-            projectURL: 'https://distorted-pixel.vercel.app/'
-        },
-        {
             title: 'shader gym',
             description: 'collection of my first few shader experiment with glsl code included.',
             tech: ['glsl', 'threejs'],
             date: 2021,
-            imgURL: 'shader_gym',
             roles: ['developer'],
             projectURL: 'https://gelargym-glsl.vercel.app/'
         }

@@ -19,6 +19,7 @@ main {
   background: none;
   position: relative;
   pointer-events: none;
+  overflow: hidden;
 }
 
 a {
@@ -26,7 +27,7 @@ a {
   text-decoration: none;
 }
 
-h1,P {
+h1,h4,P {
   margin: 0;
 }
 
@@ -48,6 +49,7 @@ small {
 
 ul {
   padding: 0;
+  margin: 0;
 }
 
 li, a {
@@ -66,4 +68,14 @@ header {
   position: fixed;
   z-index: 10;
   mix-blend-mode: difference;
+}
+
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #222;
+  width: 3px;
 }

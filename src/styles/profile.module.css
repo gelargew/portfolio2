@@ -1,0 +1,17 @@
+section.links {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+}
+
+
+section.certificate {
+    width: 140px;
+    position: absolute;
+    right: 4rem;
+    bottom: 4rem;
+}
+
