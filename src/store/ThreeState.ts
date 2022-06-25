@@ -42,3 +42,5 @@ export const setCameraProps = atom(
         set(cameraTarget, ct)
     }
 )
+
+export const glitchActive = atom(false)

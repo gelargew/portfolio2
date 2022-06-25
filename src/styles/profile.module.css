@@ -15,3 +15,10 @@ section.certificate {
     bottom: 4rem;
 }
 
+@media screen and (max-width: 900px) {
+    section.certificate {
+        right: 1rem;
+        bottom: 1rem;
+        font-size: small;
+    }
+}

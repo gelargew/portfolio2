@@ -1,15 +1,41 @@
 import { useAtom } from "jotai"
-import Link from "next/link"
 import { useRouter } from "next/router"
-import { useEffect } from "react"
-import { setCameraProps, sphereDistortFast } from "../../store/ThreeState"
+import { useEffect, useRef } from "react"
+import { glitchActive, setCameraProps, sphereDistortFast } from "../../store/ThreeState"
 import styles from '../../styles/Home.module.css'
 
+const MENU_LINKS = [
+    { title: 'Home', path: '/'},
+    { title: 'Projects', path: '/projects'},
+    { title: 'Skills', path: '/skills'},
+    { title: 'Profile', path: '/profile'}
+]
+
+var menuTimeout: NodeJS.Timeout;
 
 export default function Menu() {
+    const timer = useRef<NodeJS.Timeout>(null)
+
+    return (
+        <nav className={styles.nav}>
+            <ul>
+                {MENU_LINKS.map(data => <Link key={data.path} route={data.path} text={data.title} />)}
+            </ul>
+        </nav>
+    )
+}
+
+
+interface LinkType {
+    route: string,
+    text: string,
+}
+
+const Link = ({route, text}: LinkType) => {
     const [,distortIsFast] = useAtom(sphereDistortFast)
     const router = useRouter()
-    const [a, setCamProps] = useAtom(setCameraProps)
+    const [, setCamProps] = useAtom(setCameraProps)
+    const [, setGlitch] = useAtom(glitchActive)
 
     const hoverLink = () => {
         distortIsFast(true)
@@ -18,63 +44,42 @@ export default function Menu() {
         distortIsFast(false)
     }
 
-    const changeRoute = (route: string) => {
+    const changeRoute = () => {
         switch(route) {
             case '/projects':
+
                 setCamProps({position: {x: 0, y: 0, z: 100}})
+                setGlitch(true)
                 break
             case '/skills':
-                setCamProps({position: {x: 0, y: 0, z: 150}})
+                setCamProps({position: {x: 0, y: 0, z: 8}})
+                setGlitch(false)
                 break
             case '/profile':
-                setCamProps({position: {x: 0, y: 0, z: 5}})
+                setCamProps({position: {x: 0, y: 0, z: 4}, target: { x: 5, y: 0, z: 2}})
+                setGlitch(false)
                 break
             default:
                 setCamProps({position: {x: 0, y: 0, z: 208}})
+                setGlitch(false)
         }
-        router.push(route)
-        
+        clearTimeout(menuTimeout)
+        const el = document.querySelector('main')
+        if (el) el.style.opacity = '0'
+        menuTimeout = setTimeout(() => {
+            router.push(route)
+        }, 500)           
     }
 
-    useEffect(() => {
-        return () => {unHoverLink()}
-    }, [])
-
     return (
-        <nav className={styles.nav}>
-            <ul>
-                <li
-                    onPointerEnter={hoverLink}
-                    onPointerLeave={unHoverLink}
-                    onClick={() => changeRoute('/')}
-                >
-                    Home
-                </li>
-                <li
-                    onPointerEnter={hoverLink}
-                    onPointerLeave={unHoverLink}
-                    onClick={() => changeRoute('/projects')}
-                >
-                    Projects
-                </li>
-                <li
-                    onPointerEnter={hoverLink}
-                    onPointerLeave={unHoverLink}
-                    onClick={() => changeRoute('/skills')}
-                >
-                    Skills
-                </li>                
-                <li
-                    onPointerEnter={hoverLink}
-                    onPointerLeave={unHoverLink}
-                    onClick={() => changeRoute('/profile')}
-                >
-                    Profile
-                </li> 
-            </ul>
-        </nav>
+        <li
+        onPointerEnter={hoverLink}
+        onPointerLeave={unHoverLink}
+        onClick={changeRoute}
+        >
+            {text}
+        </li> 
     )
 }
-
 
 

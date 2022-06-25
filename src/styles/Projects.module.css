@@ -53,24 +53,50 @@ section.projects nav {
 }
 
 .projectDetail {
-    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: opacity 1s;
     position: absolute;
     bottom: 0;
     opacity: 0;
     padding: 1rem 2rem;
 }
 
-.project:hover .projectDetail {
-    padding-top: 40%;
-    background: linear-gradient(rgba(0, 0, 0, 0), black);
-    opacity: 1;
-    width: 100%;
-    cursor: pointer;
+@media screen and (min-width: 901px) {
+    .project:hover .projectDetail {
+        padding-top: 40%;
+        background: linear-gradient(rgba(0, 0, 0, 0), black);
+        opacity: 1;
+        width: 100%;
+        cursor: pointer;
+    }
 }
 
 
 @media screen and (max-width: 900px) {
-    .imageFallback h4 {
-        font-size: medium;
+    .projectList {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    section.projects {
+        top: 7rem;
+        height: 100%;
+        width: 108%;
+        place-items: flex-end;
+        text-align: end;
+    }
+
+    section.projects nav {
+        display: none;
+    }
+    .project .imageFallback {
+        display: none;
+    }
+
+    .project img {
+        display: none;
+    }
+    .projectDetail {
+        opacity: 1;
+        position: relative;
+        padding: 0.2rem;
     }
 }

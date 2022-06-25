@@ -53,6 +53,14 @@ export const PROJECT_DATA = {
             imgURL: 'ayykia.webp',
             roles: ['designer', 'developer'],
             projectURL: 'https://ayykia.vercel.app/'
+        },
+        {
+            title: 'スクロール / sukuroru',
+            description: 'a simple component to create a smooth scrolling experience for any react application',
+            tech: ['react-spring', 'typescript'],
+            date: 2021,
+            roles: [],
+            projectURL: 'https://www.npmjs.com/package/sukuroru'
         }
     ],
     webgl: [
@@ -87,7 +95,7 @@ export const PROJECT_DATA = {
             title: 'construe',
             description: 'final project of my harvard web programming class. a fullstack library management system.',
             tech: ['django', 'react', 'drf'],
-            date: 2020,
+            date: 2021,
             roles: ['developer', 'designer'],
             projectURL: 'https://github.com/gelargew/construe'
         }

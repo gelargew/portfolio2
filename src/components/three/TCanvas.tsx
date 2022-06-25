@@ -6,8 +6,11 @@ import { Bloom, DepthOfField, EffectComposer, Glitch, Noise, Vignette } from '@r
 import styles from '../../styles/Canvas.module.css'
 import { TCamera } from "./TCamera";
 import Portal from "./Portal";
+import { useAtom } from "jotai";
+import { glitchActive } from "../../store/ThreeState";
 
 export default function TCanvas() {
+    const [glitch] = useAtom(glitchActive)
 
     return (
         <div className={styles.container}>
@@ -44,8 +47,11 @@ export default function TCanvas() {
                     />
                     <Vignette eskil={false} offset={0.1} darkness={1.1} />
                     <Glitch
-                        active={false} // turn on/off the effect (switches between "mode" prop and GlitchMode.DISABLED)
-                        ratio={0.2} // Threshold for strong glitches, 0 - no weak glitches, 1 - no strong glitches.
+                        delay={[0.7, 7]} // min and max glitch delay
+                        active={glitch} // turn on/off the effect (switches between "mode" prop and GlitchMode.DISABLED)
+                        ratio={0.8} // Threshold for strong glitches, 0 - no weak glitches, 1 - no strong glitches.
+                        duration={[0.6, 1.0]} // min and max glitch duration
+                        strength={[0.1, 0.1]} // min and max glitch strength
                       />
                 </EffectComposer>
                 

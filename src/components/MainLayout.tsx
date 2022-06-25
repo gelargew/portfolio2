@@ -7,10 +7,15 @@ import Menu from "./home/Menu"
 export default function MainLayout(props: JSX.IntrinsicElements['main']) {
     const ref = useRef<HTMLDivElement>(null!)
 
+    const router = useRouter()
 
+    useEffect(() => {
+        ref.current.style.opacity = '0'
+        setTimeout(() => ref.current.style.opacity = '1', 200)
+    }, [router.pathname])
 
     return (
-        <main {...props}>
+        <main {...props} ref={ref}>
             <header>
                 <h1>Gelar Rustiawan</h1>
                 <p><small>FRONTEND ENGINEER</small></p>
