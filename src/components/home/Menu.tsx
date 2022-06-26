@@ -45,6 +45,7 @@ const Link = ({route, text}: LinkType) => {
     }
 
     const changeRoute = () => {
+        if (route === router.pathname) return
         switch(route) {
             case '/projects':
 
@@ -64,7 +65,7 @@ const Link = ({route, text}: LinkType) => {
                 setGlitch(false)
         }
         clearTimeout(menuTimeout)
-        const el = document.querySelector('main')
+        const el = document.querySelector('#mainContent') as HTMLDivElement
         if (el) el.style.opacity = '0'
         menuTimeout = setTimeout(() => {
             router.push(route)

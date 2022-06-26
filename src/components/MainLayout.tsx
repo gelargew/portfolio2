@@ -15,13 +15,15 @@ export default function MainLayout(props: JSX.IntrinsicElements['main']) {
     }, [router.pathname])
 
     return (
-        <main {...props} ref={ref}>
+        <main {...props}>
             <header>
                 <h1>Gelar Rustiawan</h1>
                 <p><small>FRONTEND ENGINEER</small></p>
                 <Menu />
             </header>
-            {props.children}
+            <section ref={ref} id="mainContent" >
+                {props.children}
+            </section>
         </main>
     )
 }

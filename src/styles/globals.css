@@ -20,12 +20,11 @@ main {
   position: relative;
   pointer-events: none;
   overflow: hidden;
-  transition: opacity 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-  opacity: 0;
 }
 
-main.hidden {
+#mainContent {
   opacity: 0;
+  transition: opacity 1s;
 }
 
 
