@@ -5,8 +5,26 @@ section.links {
     display: flex;
     flex-direction: column;
     font-weight: bold;
+    font-size: 16px;
 }
 
+section.links>a {
+    height: 28px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+section.links img {
+    height: 12px;
+}
+
+.emailLink {
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.emailLink:hover {
+    transform: translateY(-50%);
+}
 
 section.certificate {
     width: 140px;
