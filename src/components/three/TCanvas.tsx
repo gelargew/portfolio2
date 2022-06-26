@@ -1,4 +1,4 @@
-import { Html, OrbitControls } from "@react-three/drei";
+import { Html, OrbitControls, useProgress } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useEffect } from "react";
 import TheSphere from "./TheSphere/TheSphere";
@@ -31,7 +31,7 @@ export default function TCanvas() {
 
 
                 {/* -----SCENE------ */}
-                <Suspense fallback={<Html center>Loading.</Html>}>
+                <Suspense fallback={<Loader />}>
                     <TheSphere />
                     <Portal />
                 </Suspense>
@@ -59,5 +59,16 @@ export default function TCanvas() {
 
             </Canvas>
         </div>
+    )
+}
+
+
+const Loader = () => {
+    const {progress} = useProgress()
+
+    return (
+        <Html center style={{width: '20vw', height: '20px'}} >
+            {Math.round(progress)}% loading...
+        </Html>
     )
 }

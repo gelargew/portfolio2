@@ -1,6 +1,6 @@
 import { useAtom } from "jotai"
 import { useRouter } from "next/router"
-import { useEffect, useRef } from "react"
+import { useEffect, useMemo, useRef } from "react"
 import { glitchActive, setCameraProps, sphereDistortFast } from "../../store/ThreeState"
 import styles from '../../styles/Home.module.css'
 
