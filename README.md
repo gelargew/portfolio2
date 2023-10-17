@@ -1,1 +1,1 @@
-[https://gelar.dev/](gelar.dev)
+[gelar.dev](https://gelar.dev/)
