@@ -2,6 +2,9 @@
   "name": "portfolio2",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=20.x"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,25 +12,25 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@react-spring/web": "^9.4.5",
-    "@react-three/drei": "^9.13.0",
-    "@react-three/fiber": "^8.0.26",
-    "@react-three/postprocessing": "^2.3.2",
-    "@types/three": "^0.141.0",
-    "@use-gesture/react": "^10.2.15",
-    "@vercel/analytics": "^1.1.1",
-    "jotai": "^1.7.2",
-    "next": "12.1.6",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "three": "^0.141.0"
+    "@react-spring/web": "^9.7.4",
+    "@react-three/drei": "^9.114.0",
+    "@react-three/fiber": "^8.17.10",
+    "@react-three/postprocessing": "^2.16.3",
+    "@types/three": "^0.169.0",
+    "@use-gesture/react": "^10.3.1",
+    "@vercel/analytics": "^1.4.0",
+    "jotai": "^2.10.0",
+    "next": "^13.5.6",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "three": "^0.169.0"
   },
   "devDependencies": {
-    "@types/node": "17.0.43",
-    "@types/react": "18.0.12",
-    "@types/react-dom": "18.0.5",
-    "eslint": "8.17.0",
-    "eslint-config-next": "12.1.6",
-    "typescript": "4.7.3"
+    "@types/node": "^20.14.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^13.5.6",
+    "typescript": "^5.5.3"
   }
 }
